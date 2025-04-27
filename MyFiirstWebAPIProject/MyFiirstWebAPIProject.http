@@ -1,0 +1,6 @@
+@MyFiirstWebAPIProject_HostAddress = http://localhost:5104
+
+GET {{MyFiirstWebAPIProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
