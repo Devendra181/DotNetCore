@@ -57,7 +57,7 @@ namespace Mango.Services.CouponAPI
             });
 
             builder.AddAppAuthentication();
-            
+    
             builder.Services.AddAuthorization();
 
             var app = builder.Build();

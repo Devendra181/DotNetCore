@@ -23,7 +23,7 @@ namespace Mango.Services.ProductAPI.Data
                 Price = 15,
                 Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                 ImageUrl = "https://placehold.co/603x403",
-                CategoryName = "Appetizer"
+                category = "Appetizer"
 
             });
             modelBuilder.Entity<Product>().HasData(new Product
@@ -33,7 +33,7 @@ namespace Mango.Services.ProductAPI.Data
                 Price = 13.99,
                 Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                 ImageUrl = "https://placehold.co/602x402",
-                CategoryName = "Appetizer"
+                category = "Appetizer"
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
@@ -42,7 +42,7 @@ namespace Mango.Services.ProductAPI.Data
                 Price = 10.99,
                 Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                 ImageUrl = "https://placehold.co/601x401",
-                CategoryName = "Dessert"
+                category = "Dessert"
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
@@ -51,7 +51,7 @@ namespace Mango.Services.ProductAPI.Data
                 Price = 15,
                 Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                 ImageUrl = "https://placehold.co/600x400",
-                CategoryName = "Entree"
+                category = "Entree"
             });
 
         }
