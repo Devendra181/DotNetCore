@@ -87,15 +87,15 @@ namespace Mango.Services.AuthAPI.Service
 
                 if (result.Succeeded) 
                 { 
-                    var userToReturn = _db.ApplicationUsers.First(u=>u.UserName == registrationRequestDto.Email);
+                    //var userToReturn = _db.ApplicationUsers.First(u=>u.UserName == registrationRequestDto.Email);
 
-                    UserDto userDto = new()
-                    {
-                        Email = userToReturn.Email,
-                        ID = userToReturn.Id,
-                        Name = userToReturn.Name,
-                        PhoneNumber = userToReturn.PhoneNumber
-                    };
+                    //UserDto userDto = new()
+                    //{
+                    //    Email = userToReturn.Email,
+                    //    ID = userToReturn.Id,
+                    //    Name = userToReturn.Name,
+                    //    PhoneNumber = userToReturn.PhoneNumber
+                    //};
 
                     //return userDto;
                     return "";
