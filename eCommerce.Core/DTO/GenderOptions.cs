@@ -3,5 +3,5 @@ namespace eCommerce.Core.DTO;
 
 public enum GenderOptions
 {
-    Male=0, Female, Otheres
+    Male=0, Female, Others
 }
