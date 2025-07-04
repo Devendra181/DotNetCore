@@ -42,14 +42,24 @@ internal class UsersRepository : IUsersRepository
     public async Task<ApplicationUser?> GetUserByEmailAndPassword(string? email, string? passwor)
     {
 
-        return new ApplicationUser()
-        {
-            UserId = Guid.NewGuid(),
-            Email = email,
-            Password = passwor,
-            PersonName = "Person Name",
-            Gender = GenderOptions.Male.ToString()
-        };
+        //SQL Query to select a user by Email and Password
+
+        string query = "SELECT * FROM public.\"Users\" WHERE \"Email\" = @Email AND \"Password\" = @Password";
+
+        var parameters = new { Email = email, Password = passwor };
+
+        ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query, parameters);
+
+        return user;
+
+        //return new ApplicationUser()
+        //{
+        //    UserId = Guid.NewGuid(),
+        //    Email = email,
+        //    Password = passwor,
+        //    PersonName = "Person Name",
+        //    Gender = GenderOptions.Male.ToString()
+        //};
 
     }
 }

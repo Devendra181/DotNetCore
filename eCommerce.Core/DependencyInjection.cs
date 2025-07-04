@@ -1,5 +1,7 @@
 ﻿using eCommerce.Core.ServiceContracts;
 using eCommerce.Core.Services;
+using eCommerce.Core.Validators;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -24,9 +26,9 @@ namespace eCommerce.Core
             //Infrasture services often include data access, caching and othre low-level components.
 
             services.AddTransient<IUsersService, UsersService>();
+            services.AddValidatorsFromAssemblyContaining<LoginRequestValidator>();
             return services;
+
         }
-
-
     }
 }
