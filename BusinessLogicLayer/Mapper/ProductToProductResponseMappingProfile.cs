@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
+using eCommerce.BusinessLogicLayer.DTO
 using eCommerce.DataAccessLayer.Entities;
 using System;
 using System.Collections.Generic;
