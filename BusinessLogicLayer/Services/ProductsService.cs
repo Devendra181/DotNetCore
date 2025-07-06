@@ -1,27 +1,22 @@
 ﻿using AutoMapper;
-using BusinessLogicLayer.DTO;
-using BusinessLogicLayer.ServiceContracts;
+using eCommerce.BusinessLogicLayer.DTO;
+using eCommerce.BusinessLogicLayer.ServiceContracts;
 using eCommerce.DataAccessLayer.Entities;
 using eCommerce.DataAccessLayer.RepositoryContracts;
 using FluentValidation;
 using FluentValidation.Results;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Services;
+namespace eCommerce.BusinessLogicLayer.Services;
 
 public class ProductsService : IProductService
 {
-    private readonly IValidator<ProductUpdateRequest> _productAddRequestValidator;
+    private readonly IValidator<ProductAddRequest> _productAddRequestValidator;
     private readonly IValidator<ProductUpdateRequest> _productUpdateRequestValidator;
     private readonly IMapper _mapper;
     private readonly IProductsRepository _productsRepository;
 
-    public ProductsService(IValidator<ProductUpdateRequest> productAddRequestValidator,
+    public ProductsService(IValidator<ProductAddRequest> productAddRequestValidator,
         IValidator<ProductUpdateRequest> productUpdateRequestValidator,
         IMapper mapper, IProductsRepository productsRepository
         )
@@ -33,7 +28,7 @@ public class ProductsService : IProductService
 
     }
 
-    public async Task<ProductResponse?> AddProduct(ProductUpdateRequest productAddRequest)
+    public async Task<ProductResponse?> AddProduct(ProductAddRequest productAddRequest)
     {
         if (productAddRequest == null)
         {
@@ -99,7 +94,7 @@ public class ProductsService : IProductService
     {
         IEnumerable<Product?> Products = await _productsRepository.GetProducts();
 
-        IEnumerable<ProductResponse?> allProductResponse = _mapper.Map<IEnumerable<ProductResponse?>>(Products);
+        List<ProductResponse> allProductResponse = _mapper.Map<List<ProductResponse>>(Products);
 
         return allProductResponse.ToList();
     }
@@ -108,7 +103,7 @@ public class ProductsService : IProductService
     {
         IEnumerable<Product?> Products = await _productsRepository.GetProductsByCondition(conditionExpression);
 
-        IEnumerable<ProductResponse?> allProductResponse = _mapper.Map<IEnumerable<ProductResponse?>>(Products);
+        List<ProductResponse?> allProductResponse = _mapper.Map<List<ProductResponse?>>(Products);
 
         return allProductResponse.ToList();
     }

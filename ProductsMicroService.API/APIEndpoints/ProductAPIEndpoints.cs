@@ -1,6 +1,6 @@
 ﻿
-using BusinessLogicLayer.DTO;
-using BusinessLogicLayer.ServiceContracts;
+using eCommerce.BusinessLogicLayer.DTO;
+using eCommerce.BusinessLogicLayer.ServiceContracts;
 using FluentValidation;
 using FluentValidation.Results;
 
@@ -20,7 +20,7 @@ public static class ProductAPIEndpoints
 
 
         //GET /api/products/search/product-id/0000000-0000000000-0000000000000000
-        app.MapGet("/api/products/search/{ProductID:guid}", async (IProductService productService, Guid
+        app.MapGet("/api/products/search/product-id/{ProductID:guid}", async (IProductService productService, Guid
              ProductID) =>
         {
             ProductResponse? product = await productService.GetProductByCondition(temp => temp.ProductId == ProductID);
@@ -44,7 +44,7 @@ public static class ProductAPIEndpoints
 
 
         //POST /api/products/
-        app.MapPost("/api/products/", async (IProductService productService, IValidator<ProductUpdateRequest> productAddRequestValidator, ProductUpdateRequest productAddRequest) =>
+        app.MapPost("/api/products/", async (IProductService productService, IValidator<ProductAddRequest> productAddRequestValidator, ProductAddRequest productAddRequest) =>
         {
             //Validate the ProductAddRequest object using Fluent Validation
 

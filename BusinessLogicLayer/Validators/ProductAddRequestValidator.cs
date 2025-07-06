@@ -1,10 +1,10 @@
-﻿using BusinessLogicLayer.DTO;
+﻿using eCommerce.BusinessLogicLayer.DTO;
 using FluentValidation;
 
 
 namespace eCommerce.BusinessLogicLayer.Validators;
 
-public class ProductAddRequestValidator: AbstractValidator<ProductUpdateRequest>
+public class ProductAddRequestValidator: AbstractValidator<ProductAddRequest>
 {
     public ProductAddRequestValidator()
     {

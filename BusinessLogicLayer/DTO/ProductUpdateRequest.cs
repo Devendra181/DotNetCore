@@ -1,6 +1,5 @@
-﻿using eCommerce.BusinessLogicLayer.DTO;
-
-namespace BusinessLogicLayer.DTO;
+﻿
+namespace eCommerce.BusinessLogicLayer.DTO;
 
 public record ProductUpdateRequest
 (

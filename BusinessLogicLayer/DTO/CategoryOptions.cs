@@ -5,6 +5,6 @@ public enum CategoryOptions
 {
     Electronics,
     HomeAppliances,
-    Funiture,
+    Furniture,
     Accessories
 }

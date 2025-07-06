@@ -1,11 +1,11 @@
 ﻿
 
-using BusinessLogicLayer.DTO;
+using eCommerce.BusinessLogicLayer.DTO;
 using eCommerce.DataAccessLayer.Entities;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.ServiceContracts;
+namespace eCommerce.BusinessLogicLayer.ServiceContracts;
 
 public interface IProductService
 {
@@ -34,7 +34,7 @@ public interface IProductService
     /// </summary>
     /// <param name="productAddRequest">prodct to insert</param>
     /// <returns>Rroduct after inserting or null if unsuccsesful</returns>
-    Task<ProductResponse?> AddProduct(ProductUpdateRequest productAddRequest);
+    Task<ProductResponse?> AddProduct(ProductAddRequest productAddRequest);
 
 
   

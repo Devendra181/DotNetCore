@@ -2,11 +2,9 @@
 using DataAccessLayer.Repositories;
 using eCommerce.DataAccessLayer.Context;
 using eCommerce.DataAccessLayer.RepositoryContracts;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 
 namespace eCommerce.ProductsService.DataAccessLayer;
 
@@ -21,6 +19,7 @@ public static class DependencyInjection
         });
 
         services.AddScoped<IProductsRepository, ProductsRepository>();
+
 
         return services;
     }
