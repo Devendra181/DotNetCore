@@ -27,4 +27,7 @@ RUN dotnet publish "./ProductsMicroService.API.csproj" -c $BUILD_CONFIGURATION -
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV MYSQL_HOST=mysql-host-productsmicroservice
+ENV MYSQL_PASSWORD=admin
+ENV MYSQL_PORT=3306
 ENTRYPOINT ["dotnet", "ProductsMicroService.API.dll"]

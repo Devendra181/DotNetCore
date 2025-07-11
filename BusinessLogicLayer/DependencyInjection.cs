@@ -12,9 +12,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddBusinessLogicLayer(this IServiceCollection services)
     {
-        //TO DO: Add Business Logic Layer services into the IoC container
-
-        services.AddAutoMapper(typeof(ProductToProductResponseMappingProfile).Assembly);
+        // Add AutoMapper configuration using the correct overload
+        services.AddAutoMapper(cfg => cfg.AddMaps(typeof(ProductToProductResponseMappingProfile).Assembly));
 
         services.AddValidatorsFromAssemblyContaining<ProductAddRequestValidator>();
 

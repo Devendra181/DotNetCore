@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //Register the Automapper to IOC 
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingConfig).Assembly));
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
 

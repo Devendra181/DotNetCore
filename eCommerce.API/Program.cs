@@ -17,10 +17,11 @@ builder.Services.AddCore();
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add
-    (new JsonStringEnumConverter());    
+    (new JsonStringEnumConverter());
 });
 
-builder.Services.AddAutoMapper(typeof(ApplicationUserMappingProfile).Assembly);
+// Fix: Use the correct overload for AddAutoMapper
+builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(ApplicationUserMappingProfile).Assembly));
 
 builder.Services.AddFluentValidationAutoValidation();
 

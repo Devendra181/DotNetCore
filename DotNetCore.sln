@@ -83,13 +83,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Core", "eCommerce.Core\eCommerce.Core.csproj", "{A29B2EF8-C07E-4B42-ABA3-4BD9D5F6C455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsMicroService.API", "ProductsMicroService.API\ProductsMicroService.API.csproj", "{A080EFEA-E70E-40F6-9DDF-2BDFEC3D187E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsMicroService.API", "ProductsMicroService.API\ProductsMicroService.API.csproj", "{A080EFEA-E70E-40F6-9DDF-2BDFEC3D187E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Products", "Products", "{A1BC2132-52EE-4513-B24D-CE45CA7289B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{13CF147B-3480-4E0C-B817-56A9B4E842FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{13CF147B-3480-4E0C-B817-56A9B4E842FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{91D6C459-C398-4443-A19E-156CF6F11ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{91D6C459-C398-4443-A19E-156CF6F11ACB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{85C78A57-386F-4E78-9F9A-3DD39721BA78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersMicroservice.API", "OrdersMicroservice.API\OrdersMicroservice.API.csproj", "{69BBB776-43F0-43CB-A978-DDDCA3392821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "eCommerceApp\Orders\BysinessLogicLayer\BusinessLogicLayer.csproj", "{546D3C8D-039F-432E-8E2A-A52428A34CAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "eCommerceApp\Orders\DataAccessLayer\DataAccessLayer.csproj", "{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +185,18 @@ Global
 		{91D6C459-C398-4443-A19E-156CF6F11ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91D6C459-C398-4443-A19E-156CF6F11ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91D6C459-C398-4443-A19E-156CF6F11ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BBB776-43F0-43CB-A978-DDDCA3392821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BBB776-43F0-43CB-A978-DDDCA3392821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BBB776-43F0-43CB-A978-DDDCA3392821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BBB776-43F0-43CB-A978-DDDCA3392821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546D3C8D-039F-432E-8E2A-A52428A34CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546D3C8D-039F-432E-8E2A-A52428A34CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546D3C8D-039F-432E-8E2A-A52428A34CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546D3C8D-039F-432E-8E2A-A52428A34CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -219,6 +239,10 @@ Global
 		{A1BC2132-52EE-4513-B24D-CE45CA7289B6} = {C9881048-AC12-4322-B16E-965C56D79D0F}
 		{13CF147B-3480-4E0C-B817-56A9B4E842FF} = {A1BC2132-52EE-4513-B24D-CE45CA7289B6}
 		{91D6C459-C398-4443-A19E-156CF6F11ACB} = {A1BC2132-52EE-4513-B24D-CE45CA7289B6}
+		{85C78A57-386F-4E78-9F9A-3DD39721BA78} = {C9881048-AC12-4322-B16E-965C56D79D0F}
+		{69BBB776-43F0-43CB-A978-DDDCA3392821} = {85C78A57-386F-4E78-9F9A-3DD39721BA78}
+		{546D3C8D-039F-432E-8E2A-A52428A34CAA} = {85C78A57-386F-4E78-9F9A-3DD39721BA78}
+		{9CAD153D-29A2-4CFF-9D81-A9FBBD76F29B} = {85C78A57-386F-4E78-9F9A-3DD39721BA78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {592A96C9-D392-441F-8547-69660189D47A}
